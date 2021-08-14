@@ -1,9 +1,12 @@
 import React from "react";
-
+import Header from "./components/Header";
+import LandingPage from "./components/LandingPage";
 const App = () => {
   return (
     <div>
-      <h1>hello world</h1>
+      <LandingPage>
+        <Header></Header>
+      </LandingPage>
     </div>
   );
 };
