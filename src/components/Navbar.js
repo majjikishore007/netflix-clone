@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-const Header = () => {
+const Navbar = () => {
   return (
     <Nav>
       <Logo>
@@ -13,7 +13,7 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
 const NavContainer = styled.div`
   display: flex;
   flex: 1;

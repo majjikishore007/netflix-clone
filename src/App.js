@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
+import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <div>
       <LandingPage>
-        <Header></Header>
+        <Navbar></Navbar>
       </LandingPage>
     </div>
   );
