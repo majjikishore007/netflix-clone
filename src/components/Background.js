@@ -18,6 +18,7 @@ export default Background;
 const Container = styled.div`
   width: 100%;
   position: relative;
+  border-bottom: 8px solid #222;
 `;
 const Header = styled.div`
   height: 90vh;
@@ -42,4 +43,3 @@ const Header = styled.div`
     height: 100%;
   }
 `;
-const StoryContent = styled.div``;

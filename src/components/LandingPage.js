@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/landingpage.css";
 import Background from "./Background";
-
 const LandingPage = (props) => {
   return (
     <div>
@@ -29,18 +28,23 @@ const LandingPage = (props) => {
         </div>
       </Background>
       <section>
-        <div>
-          <h1>helloo</h1>
-        </div>
-      </section>
-      <section>
-        <div>
-          <h1>helloo</h1>
-        </div>
-      </section>
-      <section>
-        <div>
-          <h1>helloo</h1>
+        <div className='container'>
+          <div className='split'>
+            <div className='split-content'>
+              <h2>Enjoy on your TV.</h2>
+              <p>
+                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+                Blu-ray players and more.
+              </p>
+            </div>
+            <div className='vedio-content'>
+              <img src='/images/tv.png' alt='' />
+              {console.log("hello")}
+              <video width='750' height='500' autoPlay>
+                <source src='/vedioes/video-tv-in-0819.m4v' type='video/mp4' />
+              </video>
+            </div>
+          </div>
         </div>
       </section>
     </div>
