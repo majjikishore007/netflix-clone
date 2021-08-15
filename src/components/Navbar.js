@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 const Navbar = () => {
   return (
@@ -7,7 +8,9 @@ const Navbar = () => {
         <img src='/images/netflix.svg' alt='' />
       </Logo>
       <NavContainer>
-        <SignUp>Sign Up</SignUp>
+        <Link to='/login'>
+          <SignUp>Sign Up</SignUp>
+        </Link>
       </NavContainer>
     </Nav>
   );
