@@ -24,7 +24,8 @@ const SignUp = styled.button`
   border-radius: 4px;
   background-color: #e21717;
   color: white;
-  width: 90px;
+  max-width: 90px;
+  width: 100%;
   height: 40px;
   border: none;
   letter-spacing: 1.5px;
@@ -41,7 +42,7 @@ const Nav = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 150px;
+  max-width: 150px;
   img {
     width: 100%;
     height: 100%;

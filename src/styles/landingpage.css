@@ -1,0 +1,86 @@
+.content {
+  display: flex;
+  /* color:black; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 950px;
+  width: 100%;
+}
+.contentBox {
+  position: relative;
+  width: 100%;
+  padding: 75px 0;
+  margin: 0 auto;
+  text-align: center;
+  /* z-index: 1; */
+}
+.contentBox h1 {
+  font-size: 3.125rem;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.1;
+}
+.contentBox h2 {
+  font-size: 1.625rem;
+  max-width: 640px;
+  margin: 1rem auto;
+}
+.form {
+  max-width: 950px;
+  padding-top: 0.85rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.form h3 {
+  font-size: 1rem;
+  max-width: none;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+
+   
+}
+.details input[type="email"]{
+    height: 48px;
+    padding: 10px 10px 0;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border:none;
+    font-size:1.4em;
+}
+.details button{
+    font-size: 1.625rem;
+    min-height: 60px;
+    width: 40%;
+     background-color: #e21717;
+     outline: none;
+     border-radius:0  0 0 4px;
+    border:none;
+    color: white;
+}
+.details > *{
+      margin-bottom: 30px;
+  }
+@media (min-width: 70em) {
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+}
+section {
+  color: black;
+  padding: 70px 80px;
+}
