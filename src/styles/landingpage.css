@@ -178,3 +178,48 @@ section {
     line-height: 1.5;
   }
 }
+
+
+/* animation css */
+
+.animation{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin:  auto;
+  /* min-width: 15em; */
+  height: 3em;
+  padding: .35em .75em;
+  border:1px solid white;
+  left: 17%;
+  bottom: 8%;
+  z-index: 2;
+  background-color: black;
+  border: 2px solid rgba(255,255,255,.25);
+  box-shadow: 0 0 2em 0 #000;
+  border-radius: 6px;
+}
+.animation-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.animation-img img{
+  width: 100%;
+  height: 100%;
+  display:block;
+}
+@media (min-width: 70em) {
+  .animation{
+    height:6em;
+     width: 50%;
+     left: 24%;
+  }
+  
+}
