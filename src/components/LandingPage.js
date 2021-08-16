@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/landingpage.css";
 import Background from "./Background";
-import ReactPlayer from "react-player";
+import Fotter from "./Fotter";
 const LandingPage = () => {
   return (
     <div>
@@ -22,14 +22,14 @@ const LandingPage = () => {
               </h3>
               <div className='details'>
                 <input type='email' placeholder='Email address' />
-                <button className='btn'>Get started</button>
+                <button className='button'>Get started</button>
               </div>
             </div>
           </div>
         </div>
       </Background>
       <section>
-        <div className='container'>
+        <div className='container-landing'>
           <div className='split'>
             <div className='split-content'>
               <h2>Enjoy on your TV.</h2>
@@ -48,7 +48,7 @@ const LandingPage = () => {
         </div>
       </section>
       <section>
-        <div className='container'>
+        <div className='container-landing'>
           <div className='split'>
             <div className='vedio-content'>
               <img src='/images/mobile-0819.jpg' alt='' />
@@ -79,7 +79,7 @@ const LandingPage = () => {
         </div>
       </section>
       <section>
-        <div className='container'>
+        <div className='container-landing'>
           <div className='split'>
             <div className='split-content'>
               <h2>Watch everywhere.</h2>
@@ -106,7 +106,7 @@ const LandingPage = () => {
         </div>
       </section>
       <section>
-        <div className='container'>
+        <div className='container-landing'>
           <div className='split'>
             <div className='vedio-content'>
               <img
@@ -124,6 +124,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      <Fotter></Fotter>
     </div>
   );
 };

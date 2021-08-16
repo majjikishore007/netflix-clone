@@ -5,11 +5,13 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo>
-        <img src='/images/netflix.svg' alt='' />
+        <Link to='/'>
+          <img src='/images/netflix.svg' alt='' />
+        </Link>
       </Logo>
       <NavContainer>
         <Link to='/login'>
-          <SignUp>Sign Up</SignUp>
+          <SignUp>Sign In</SignUp>
         </Link>
       </NavContainer>
     </Nav>
