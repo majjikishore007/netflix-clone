@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Background from "./Background";
 import "../styles/login.css";
 import Fotter from "./Fotter";
+import { auth, provider } from "../firebase";
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = () => {
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        // ...
+      })
+      .catch((error) => {
+        console.log("error", error);
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  };
+  const signUp = () => {
+    console.log(`Email ${email} and passswoed ${password}`);
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  };
   return (
     <div>
       <Background>
@@ -14,13 +49,29 @@ const Login = () => {
             </div>
             <div className='form'>
               <div>
-                <input type='email' placeholder='Email address' />
+                <input
+                  value={email}
+                  type='email'
+                  placeholder='Email address'
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
               </div>
               <div>
-                <input type='password' placeholder='Password' />
+                <input
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  type='password'
+                  placeholder='Password'
+                />
               </div>
               <div>
-                <button className='button'>Sign In</button>
+                <button onClick={signIn} className='button'>
+                  Sign In
+                </button>
               </div>
               <div>
                 New to Netflix? <a href=''> Sign up now</a> . This page is

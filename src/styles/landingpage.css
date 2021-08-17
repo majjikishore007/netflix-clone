@@ -50,7 +50,7 @@
   margin: 0 auto;
 }
 .details input[type="email"] {
-  height: 60px;
+  height: 100%;
   padding: 10px 10px 0;
   width: 100%;
   border-radius: 4px 4px 4px 0;
@@ -60,7 +60,8 @@
 }
 .details button {
   /* font-size: 1rem; */
-  min-height: 60px;
+  margin-top: 10px;
+  height: 90%;
   width: 50%;
   background-color: #e21717;
   outline: none;

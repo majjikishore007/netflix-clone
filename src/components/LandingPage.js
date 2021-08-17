@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import { auth } from "../firebase";
 import "../styles/landingpage.css";
 import Background from "./Background";
 import Fotter from "./Fotter";
 const LandingPage = () => {
+  console.log(auth);
   return (
     <div>
       <Background>
