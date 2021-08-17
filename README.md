@@ -24,6 +24,8 @@
 
 - [Built With](#built-with)
 - [Features](#features)
+- [setup guide](#setup-guide)
+
 
 <!-- OVERVIEW -->
 
@@ -47,3 +49,12 @@ This application has features :
 - search for differnt movies
 - subscrition for membership requests
 
+## Setup guide
+
+- fork the repo on github
+- clone it to your local Setup
+- make sure you have node installed of version 10 or above
+- setup your firebase userCredential in `.env ` file
+- use the following commands to start the project up and running
+- ` npm install `
+- `npm start`
