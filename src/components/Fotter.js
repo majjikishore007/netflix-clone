@@ -5,70 +5,74 @@ const Fotter = () => {
     <div>
       <FtBox>
         <Container>
-          <div>
-            {" "}
-            <A>Questions? Call 000-800-040-1843</A>
-          </div>
-          <Grid>
-            <div>
-              {" "}
-              <a href=''>FAQ</a>{" "}
+          <Grid className='row'>
+            <div className='col'>
+              <div>
+                {" "}
+                <a href=''>FAQ</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Investor Relations</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Privacy</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Speed Test</a>{" "}
+              </div>
             </div>
-            <div>
-              {" "}
-              <a href=''>Investor Relations</a>{" "}
+            <div className='col'>
+              <div>
+                {" "}
+                <a href=''>Help Centre</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Jobs</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Cookie Preferences</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Legal notices</a>{" "}
+              </div>
             </div>
-            <div>
-              {" "}
-              <a href=''>Privacy</a>{" "}
+            <div className='col'>
+              <div>
+                {" "}
+                <a href=''>Account</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Ways to Watch</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Corporate Information</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Only on Netflix</a>{" "}
+              </div>
             </div>
-            <div>
-              {" "}
-              <a href=''>Speed Test</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Help Centre</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Jobs</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Cookie Preferences</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Legal notices</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Account</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Ways to Watch</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Corporate Information</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Only on Netflix</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Media Centre</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Terms of Use</a>{" "}
-            </div>
-            <div>
-              {" "}
-              <a href=''>Contact Us</a>{" "}
+            <div className='col'>
+              <div>
+                {" "}
+                <a href=''>Media Centre</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Terms of Use</a>{" "}
+              </div>
+              <div>
+                {" "}
+                <a href=''>Contact Us</a>{" "}
+              </div>
             </div>
           </Grid>
         </Container>
@@ -101,8 +105,8 @@ const Container = styled.div`
   margin: auto;
 `;
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, 300px); */
   transition: all 250ms ease-in-out;
   div {
     margin: 1em;
