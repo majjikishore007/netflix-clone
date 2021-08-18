@@ -62,7 +62,7 @@ const LandingPage = () => {
                   <div style={{ fontWeight: "bold" }}>Stranger Things</div>
                   <div style={{ color: "blue" }}>Downloading...</div>
                 </div>
-                <div>
+                <div className='animation-gif'>
                   <img
                     style={{ width: "100%", height: "100%" }}
                     src='/images/download-icon.gif'
