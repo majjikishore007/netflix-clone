@@ -19,14 +19,16 @@
 .navbar-light .navbar-nav .nav-link {
   color: #f5ebeb;
 }
-.navbar-toggler {
-    padding: .25rem .75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    /* background-color: transparent; */
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    transition: box-shadow .15s ease-in-out;
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-color: red;
+    border-radius: 5px;
 }
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color:white;
