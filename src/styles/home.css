@@ -1,0 +1,10 @@
+.menu{
+   position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+  background-color: black;
+}
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
