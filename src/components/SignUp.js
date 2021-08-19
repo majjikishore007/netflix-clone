@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Background from "./Background";
 import "../styles/login.css";
+import "../styles/signup.css";
+
 import Fotter from "./Fotter";
 import { auth, provider } from "../firebase";
 import { Link } from "react-router-dom";
-const Login = () => {
+
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -46,7 +49,7 @@ const Login = () => {
         <Container>
           <div className="container-signin">
             <div>
-              <h1>Sign In</h1>
+              <h1>Sign Up</h1>
             </div>
             <div className="form">
               <div>
@@ -58,8 +61,6 @@ const Login = () => {
                     setEmail(e.target.value);
                   }}
                 />
-              </div>
-              <div>
                 <input
                   value={password}
                   onChange={(e) => {
@@ -70,18 +71,36 @@ const Login = () => {
                 />
               </div>
               <div>
-                <button onClick={signIn} className="button">
-                  Sign In
+                <button className="rounded">
+                  <div>
+                    {" "}
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" />
+                  </div>
+                  <div className="titles">Sign up with Google</div>
                 </button>
               </div>
               <div>
+                <div className="rounded">
+                  <div>
+                    {" "}
+                    <img src="https://img.icons8.com/color/48/000000/facebook-circled--v1.png" />
+                  </div>
+                  <div className="titles">Sign up with Facebok</div>
+                </div>
+              </div>
+              <div>
+                <button onClick={signIn} className="button">
+                  Sign Up
+                </button>
+              </div>
+              {/* <div>
                 New to Netflix?{" "}
                 <Link to="/signup">
                   <a href=""> Sign up now</a>
                 </Link>{" "}
                 . This page is protected by Google reCAPTCHA to ensure you're
                 not a bot. Learn more.
-              </div>
+              </div> */}
             </div>
           </div>
         </Container>
@@ -91,7 +110,6 @@ const Login = () => {
   );
 };
 
-export default Login;
 const Container = styled.div`
   position: absolute;
   left: 50%;
@@ -101,7 +119,9 @@ const Container = styled.div`
   width: 100%;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.75);
-  // height: 70vh;
+
   justify-content: center;
   align-items: center;
 `;
+
+export default SignUp;
