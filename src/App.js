@@ -6,20 +6,24 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import Signup from "./components/SignUp";
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
             <LandingPage>
               <Navbar></Navbar>
             </LandingPage>
           </Route>
-          <Route exact path='/login'>
+          <Route exact path="/login">
             <Login></Login>
           </Route>
-          <Route exact path='/home'>
+          <Route exact path="/signup">
+            <Signup></Signup>
+          </Route>
+          <Route exact path="/home">
             <Home></Home>
           </Route>
         </Switch>
