@@ -1,10 +1,10 @@
-.rounded {
+.btn-rounded {
   display: flex;
   flex-direction: row;
   background-color: white;
   color: black;
   text-align: center;
-  border: 2px solid #73ad21;
+  border: 5px solid green;
   border-radius: 25px;
   width: 90%;
   letter-spacing: 1.3px;
@@ -15,20 +15,40 @@
   /* height: 3em; */
   align-items: center;
   margin-left: 5%;
+  margin-top: 5%;
   padding: 5px;
+  opacity: 0.9;
 }
 
-.rounde > * {
+.btn-rounded > * {
   margin: 5px 0;
 }
 
-/* .img1 {
-  height: 100%;
-  width: 20%;
-} */
+.img1 {
+  height: 2rem;
+  width: 2rem;
+}
 
 .titles {
   text-align: center;
   width: 80%;
-  font-size: 1.2rem;
+  /* letter-spacing: 1.2; */
+  font-weight: 400;
+  font-size: 1rem;
+  /* border: 1px solid black; */
+}
+
+.underline {
+  height: 1px;
+  width: 25%;
+  margin: 0 15px;
+  display: inline-block;
+  background-color: white;
+  border: 1px solide white;
+  z-index: 2;
+}
+.under {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

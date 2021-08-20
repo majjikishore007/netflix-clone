@@ -71,8 +71,18 @@ const SignUp = () => {
                 />
               </div>
               <div>
-                <button className="rounded">
-                  <div>
+                <button onClick={signIn} className="button">
+                  Sign Up
+                </button>
+              </div>
+              <div className="under">
+                <span className="underline"></span>
+                <span> OR </span>
+                <span className="underline"></span>
+              </div>
+              <div>
+                <button className="btn-rounded">
+                  <div className="img1">
                     {" "}
                     <img src="https://img.icons8.com/color/48/000000/google-logo.png" />
                   </div>
@@ -80,19 +90,15 @@ const SignUp = () => {
                 </button>
               </div>
               <div>
-                <div className="rounded">
-                  <div>
+                <button className="btn-rounded">
+                  <div className="img1">
                     {" "}
                     <img src="https://img.icons8.com/color/48/000000/facebook-circled--v1.png" />
                   </div>
                   <div className="titles">Sign up with Facebok</div>
-                </div>
-              </div>
-              <div>
-                <button onClick={signIn} className="button">
-                  Sign Up
                 </button>
               </div>
+
               {/* <div>
                 New to Netflix?{" "}
                 <Link to="/signup">
@@ -119,9 +125,10 @@ const Container = styled.div`
   width: 100%;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.75);
-
+  /* height: 60vh; */
   justify-content: center;
   align-items: center;
+  padding: 3em;
 `;
 
 export default SignUp;
