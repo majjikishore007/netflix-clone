@@ -3,6 +3,7 @@
   position: -webkit-sticky;
   top: 0; /* required */
   background-color: black;
+  z-index: 2;
 }
 .cards{
   display:grid;

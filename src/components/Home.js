@@ -5,6 +5,7 @@ import "../styles/home.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setMovies, selectMovie } from "../data/Movies/MovieSlice";
 import MovieCard from "./MovieCard";
+import Slider from "./Slider";
 const Home = () => {
   const dispatch = useDispatch();
   const movies = useSelector(selectMovie);
@@ -29,15 +30,16 @@ const Home = () => {
         <Navbar />
       </div>
       <Conatiner>
-        <img src='https://image.tmdb.org/t/p/original/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg' />
+        <Slider></Slider>
       </Conatiner>
-      <div className='cards'>
-        {movies.map((movie) => (
-          <MovieCard
-            img={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-          ></MovieCard>
-        ))}
-      </div>
+      <h1 style={{ color: "black" }}>trending</h1>
+      <Conatiner>
+        <Slider></Slider>
+      </Conatiner>
+      <h1 style={{ color: "black" }}>trending</h1>
+      <Conatiner>
+        <Slider></Slider>
+      </Conatiner>
     </>
   );
 };
@@ -45,10 +47,5 @@ const Home = () => {
 export default Home;
 const Conatiner = styled.div`
   width: 100%;
-  /* height: 80vh; */
-  /* background: blue; */
-  img {
-    width: 100%;
-    height: 100%;
-  }
+  padding: 20px;
 `;
