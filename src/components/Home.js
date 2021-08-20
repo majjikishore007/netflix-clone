@@ -32,14 +32,6 @@ const Home = () => {
       <Conatiner>
         <Slider></Slider>
       </Conatiner>
-      <h1 style={{ color: "black" }}>trending</h1>
-      <Conatiner>
-        <Slider></Slider>
-      </Conatiner>
-      <h1 style={{ color: "black" }}>trending</h1>
-      <Conatiner>
-        <Slider></Slider>
-      </Conatiner>
     </>
   );
 };
@@ -47,5 +39,6 @@ const Home = () => {
 export default Home;
 const Conatiner = styled.div`
   width: 100%;
-  padding: 20px;
+  padding: 0px 5em;
+  margin: 10px 0px;
 `;
