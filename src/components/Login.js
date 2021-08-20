@@ -95,13 +95,14 @@ export default Login;
 const Container = styled.div`
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 40em;
+  max-width: 35em;
   width: 100%;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.75);
   // height: 70vh;
   justify-content: center;
   align-items: center;
+  padding: 3em;
 `;
