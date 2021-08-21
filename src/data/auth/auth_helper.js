@@ -20,7 +20,6 @@ export const googleSignIn = () => {
     });
 };
 export const facebookSignIn = () => {
-  console.log(fbProvider);
   firebase
     .auth()
     .signInWithPopup(fbProvider)
@@ -33,6 +32,7 @@ export const facebookSignIn = () => {
 
       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
       var accessToken = credential.accessToken;
+      console.log(result);
       return result;
       // ...
     })

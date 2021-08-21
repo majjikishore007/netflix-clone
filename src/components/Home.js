@@ -10,9 +10,8 @@ const Home = () => {
   const dispatch = useDispatch();
   const movies = useSelector(selectMovie);
   const getData = async () => {
-    //3a6ea45912e022a5d4fdac499fa4adc2
     const data = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=3a6ea45912e022a5d4fdac499fa4adc2&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_APP}&language=en-US&page=1`
     );
     const response = await data.json();
     const temp = response.results;
