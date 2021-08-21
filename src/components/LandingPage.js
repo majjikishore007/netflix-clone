@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { signupWithEmail } from "../data/auth/auth_helper";
 import { auth } from "../firebase";
 import "../styles/landingpage.css";
 import Background from "./Background";
 import Fotter from "./Fotter";
 const LandingPage = () => {
-  console.log(auth);
+  const [email, setEmail] = useState("");
   return (
     <div>
       <Background>
@@ -23,8 +24,22 @@ const LandingPage = () => {
                 membership.
               </h3>
               <div className='details'>
-                <input type='email' placeholder='Email address' />
-                <button className='button'>Get started</button>
+                <input
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  type='email'
+                  placeholder='Email address'
+                />
+                <button
+                  onClick={() => {
+                    signupWithEmail(email);
+                  }}
+                  className='button'
+                >
+                  Get started
+                </button>
               </div>
             </div>
           </div>
