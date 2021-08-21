@@ -7,7 +7,7 @@ const tvshowSlice = createSlice({
   initialState,
   reducers: {
     setTvShows: (state, action) => {
-      state = action.payload;
+      state.tvshows = action.payload;
     },
   },
 });

@@ -6,8 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { useSelector } from "react-redux";
 import { selectMovie } from "../data/Movies/MovieSlice";
 import "../styles/slider.css";
-const SliderMovie = () => {
-  const movies = useSelector(selectMovie);
+const SliderMovie = (props) => {
+  const { movies } = props;
+
   var settings = {
     dots: true,
     infinite: true,
@@ -19,14 +20,18 @@ const SliderMovie = () => {
   return (
     <>
       <Carousel {...settings}>
-        {movies.map((movie) => (
-          <Wrap>
-            <img
-              src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-              alt=''
-            />
-          </Wrap>
-        ))}
+        {movies != null ? (
+          movies.map((movie) => (
+            <Wrap>
+              <img
+                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                alt=''
+              />
+            </Wrap>
+          ))
+        ) : (
+          <h1>hello</h1>
+        )}
       </Carousel>
     </>
   );
@@ -45,7 +50,7 @@ const Carousel = styled(Slider)`
     }
   }
   li.slick-active button:before {
-    color: white;
+    color: blue;
   }
   button {
     z-index: 2;
@@ -62,6 +67,10 @@ const Wrap = styled.div`
     transition-duration: 300ms;
     &:hover {
       border: 4px solid rgb(249, 249, 249, 0.8);
+      transform: scale(1.3);
+    }
+    img:hover {
+      transform: scale(1.3);
     }
   }
 `;

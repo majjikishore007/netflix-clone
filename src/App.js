@@ -7,24 +7,32 @@ import Home from "./components/Home";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import Signup from "./components/SignUp";
+import Movies from "./components/Movies";
+import NewAndPopular from "./components/NewAndPopular";
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <LandingPage>
               <Navbar></Navbar>
             </LandingPage>
           </Route>
-          <Route exact path="/login">
+          <Route exact path='/login'>
             <Login></Login>
           </Route>
-          <Route exact path="/signup">
+          <Route exact path='/signup'>
             <Signup></Signup>
           </Route>
-          <Route exact path="/home">
+          <Route exact path='/home'>
             <Home></Home>
+          </Route>
+          <Route exact path='/movies'>
+            <Movies></Movies>
+          </Route>
+          <Route exact path='/new&popular'>
+            <NewAndPopular></NewAndPopular>
           </Route>
         </Switch>
       </Router>
