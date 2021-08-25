@@ -57,13 +57,16 @@ input[type="checkbox"] {
 }
 .user-icon{
   width: 5em;
-  /* height:40px; */
-  /* border-radius: 50%; */
+  margin: 2px;
+}
+.dropdown-toggle::after {
+    display: hidden;
+    visibility: hidden;
 }
 .user-icon img {
   width: 100%;
   height: 100%;
-  /* border-radius: 50%; */
+  border-radius: 50%;
   
 }
 .dropdown-menu{

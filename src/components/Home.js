@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setMovies, selectMovie } from "../data/Movies/MovieSlice";
 import MovieCard from "./MovieCard";
 import Slider from "./Slider";
+
 const Home = () => {
   const dispatch = useDispatch();
   const movies = useSelector(selectMovie);
