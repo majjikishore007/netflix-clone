@@ -52,3 +52,24 @@ input[type="checkbox"] {
   left: -20%;
   top: 0;
 }
+.dropdown{
+  margin-right: 6px;
+}
+.user-icon{
+  width: 5em;
+  /* height:40px; */
+  /* border-radius: 50%; */
+}
+.user-icon img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 50%; */
+  
+}
+.dropdown-menu{
+  background-color: black;
+  color: white;
+}
+.dropdown-item{
+  color: white;
+}
