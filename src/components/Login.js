@@ -5,11 +5,40 @@ import "../styles/login.css";
 import Fotter from "./Fotter";
 import { Link } from "react-router-dom";
 import { facebookSignIn, googleSignIn } from "../data/auth/auth_helper";
-
+import { useDispatch } from "react-redux";
+import { setUserLogin, setUserSignout } from "../data/auth/UserSlice";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const dispatch = useDispatch();
+  const googlelogin = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result);
+        var credential = result.credential;
+        var user = result.user;
+        var accessToken = credential.accessToken;
+        dispatch(
+          setUserLogin({
+            name: user.displayName,
+            email: user.email,
+            photo: user.photoURL,
+          })
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const facebooklogin = () => {
+    facebookSignIn()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div>
       <Background>
@@ -51,7 +80,7 @@ const Login = () => {
                 <span className='underline'></span>
               </div>
               <div>
-                <button className='btn-rounded' onClick={googleSignIn}>
+                <button className='btn-rounded' onClick={googlelogin}>
                   <div className='img1'>
                     {" "}
                     <img src='https://img.icons8.com/color/48/000000/google-logo.png' />
@@ -60,7 +89,7 @@ const Login = () => {
                 </button>
               </div>
               <div>
-                <button className='btn-rounded' onClick={facebookSignIn}>
+                <button className='btn-rounded' onClick={facebooklogin}>
                   <div className='img1'>
                     {" "}
                     <img src='https://img.icons8.com/color/48/000000/facebook-circled--v1.png' />

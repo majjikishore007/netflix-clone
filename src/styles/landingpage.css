@@ -51,7 +51,7 @@
 }
 .details input[type="email"] {
   height: 100%;
-  padding: 10px 10px 0;
+  padding: 15px 15px ;
   width: 100%;
   border-radius: 4px 4px 4px 0;
   outline: none;
@@ -61,6 +61,7 @@
 .details button {
   /* font-size: 1rem; */
   margin-top: 10px;
+   padding: 15px 15px ;
   height: 90%;
   width: 50%;
   background-color: #e21717;
@@ -96,6 +97,7 @@
     font-size: 1em;
     width: 40%;
     outline: none;
+     padding: 0px;
   }
   .contentBox h1 {
     max-width: 650px;
