@@ -21,7 +21,7 @@ const Container = styled.div`
   border-bottom: 8px solid #222;
 `;
 const Header = styled.div`
-  height: 90vh;
+  height: 70vh;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.672),

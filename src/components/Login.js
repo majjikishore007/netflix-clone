@@ -3,11 +3,15 @@ import styled from "styled-components";
 import Background from "./Background";
 import "../styles/login.css";
 import Fotter from "./Fotter";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { facebookSignIn, googleSignIn } from "../data/auth/auth_helper";
 import { useDispatch } from "react-redux";
 import { setUserLogin, setUserSignout } from "../data/auth/UserSlice";
+import { css } from "@emotion/react";
 const Login = () => {
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#ffffff");
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
@@ -25,6 +29,10 @@ const Login = () => {
             photo: user.photoURL,
           })
         );
+
+        setTimeout(() => {
+          history.push("/home");
+        }, 1000);
       })
       .catch((error) => {
         console.log(error);
@@ -69,7 +77,12 @@ const Login = () => {
                 />
               </div>
               <div>
-                <button onClick={() => {}} className='button'>
+                <button
+                  onClick={() => {
+                    setLoading(!loading);
+                  }}
+                  className='button animate__hinge'
+                >
                   Sign In
                 </button>
               </div>
@@ -89,7 +102,7 @@ const Login = () => {
                 </button>
               </div>
               <div>
-                <button className='btn-rounded' onClick={facebooklogin}>
+                <button className='btn-rounded ' onClick={facebooklogin}>
                   <div className='img1'>
                     {" "}
                     <img src='https://img.icons8.com/color/48/000000/facebook-circled--v1.png' />

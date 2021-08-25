@@ -9,6 +9,7 @@ import { store } from "./store";
 import Signup from "./components/SignUp";
 import Movies from "./components/Movies";
 import NewAndPopular from "./components/NewAndPopular";
+import UserProfile from "./components/UserProfile";
 const App = () => {
   return (
     <Provider store={store}>
@@ -33,6 +34,9 @@ const App = () => {
           </Route>
           <Route exact path='/new&popular'>
             <NewAndPopular></NewAndPopular>
+          </Route>
+          <Route exact path='/profile'>
+            <UserProfile></UserProfile>
           </Route>
         </Switch>
       </Router>
