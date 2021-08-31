@@ -42,7 +42,7 @@ const Carousel = styled(Slider)`
   margin-inline: auto;
   flex-direction: row;
   .slick-list {
-    overflow: visible;
+    overflow: hidden;
   }
   ul li button {
     &:before {
