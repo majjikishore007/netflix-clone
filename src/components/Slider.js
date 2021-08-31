@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/slider.css";
+import { Link } from "react-router-dom";
 const SliderMovie = (props) => {
   const { movies } = props;
 
@@ -17,20 +18,18 @@ const SliderMovie = (props) => {
   return (
     <>
       <Carousel {...settings}>
-        {movies != null ? (
-          movies.map((movie) => (
-            <Wrap>
-              <img
-                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                alt=''
-              />
-
-              <button className='btn btn-info onhover'>play</button>
-            </Wrap>
-          ))
-        ) : (
-          <h1>hello</h1>
-        )}
+        {movies != null
+          ? movies.map((movie) => (
+              <Link to={`/detail/${movie.id}`}>
+                <Wrap key={movie.id}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                    alt=''
+                  />
+                </Wrap>
+              </Link>
+            ))
+          : ""}
       </Carousel>
     </>
   );
@@ -43,7 +42,7 @@ const Carousel = styled(Slider)`
   margin-inline: auto;
   flex-direction: row;
   .slick-list {
-    /* overflow: visible; */
+    overflow: visible;
   }
   ul li button {
     &:before {
@@ -53,9 +52,6 @@ const Carousel = styled(Slider)`
   }
   li.slick-active button:before {
     color: blue;
-  }
-  button {
-    z-index: 2;
   }
 `;
 const Wrap = styled.div`
@@ -72,9 +68,6 @@ const Wrap = styled.div`
     &:hover {
       border: 4px solid rgb(249, 249, 249, 0.8);
       transform: scale(1.1);
-      button {
-        visibility: visible;
-      }
     }
   }
 `;

@@ -35,7 +35,6 @@ const UserProfile = () => {
         <div className='billing'>your billning</div>
         <div className='profiles'>
           <h1>children</h1>
-          <h1>mom</h1>
         </div>
       </Conatiner>
     </>
@@ -48,7 +47,6 @@ const Conatiner = styled.div`
   max-width: 1024px;
   font-size: 1em;
   margin: auto;
-  color: black;
   & > * {
     border-bottom: 1px solid black;
   }

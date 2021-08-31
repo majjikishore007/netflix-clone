@@ -1,8 +1,8 @@
 .menu{
    position: sticky;
   position: -webkit-sticky;
-  top: 0; /* required */
-  background-color: black;
+  top: 0; 
+  background-color: rgb(20, 20, 20);
   z-index: 2;
 }
 .cards{

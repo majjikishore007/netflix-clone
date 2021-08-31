@@ -50,19 +50,20 @@ const Home = () => {
         <div className='menu'>
           <Navbar />
         </div>
+
         <ConatinerVedio>
           <Video></Video>
         </ConatinerVedio>
         <Conatiner>
-          <h1 className='text-align left'>Trendingmovies</h1>
+          <h2 className='text-align left'>Trendingmovies</h2>
           <Slider movies={trendingmovies}></Slider>
         </Conatiner>
         <Conatiner>
-          <h1 className='text-align left'>Popular</h1>
+          <h2 className='text-align left'>Popular</h2>
           <Slider movies={popular}></Slider>
         </Conatiner>
         <Conatiner>
-          <h1 className='text-align left'>Up coming</h1>
+          <h2 className='text-align left'>Up coming</h2>
           <Slider movies={upcoming}></Slider>
         </Conatiner>
       </>
@@ -78,5 +79,6 @@ const ConatinerVedio = styled.div`
 const Conatiner = styled.div`
   width: 100%;
   padding: 0px 3em;
-  margin: 10px auto;
+  /* margin: 10px auto; */
+  background-color: black;
 `;
