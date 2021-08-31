@@ -1,44 +1,82 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import "../styles/home.css";
 import { useDispatch, useSelector } from "react-redux";
-import { setMovies, selectMovie } from "../data/Movies/MovieSlice";
+import {
+  setMovies,
+  selectMovie,
+  setTrending,
+  selectTrendingMovies,
+  setUpcoming,
+  selectUpComingMovies,
+} from "../data/Movies/MovieSlice";
 import MovieCard from "./MovieCard";
 import Slider from "./Slider";
-
+import Spinner from "./Spinner";
+import {
+  getMovies,
+  getTrending,
+  getUpComing,
+} from "../data/Movies/tmdb_helper";
+import Video from "./Video";
 const Home = () => {
   const dispatch = useDispatch();
-  const movies = useSelector(selectMovie);
-  const getData = async () => {
-    const data = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_APP}&language=en-US&page=1`
-    );
-    const response = await data.json();
-    const temp = response.results;
-    console.log(temp);
-    console.log(setMovies);
-    dispatch(setMovies(temp));
-    console.log("redux strore", movies);
-  };
+  const popular = useSelector(selectMovie);
+  const trendingmovies = useSelector(selectTrendingMovies);
+  const upcoming = useSelector(selectUpComingMovies);
+  const [loadSpinner, setLoadSpinner] = useState(true);
   useEffect(() => {
-    getData();
+    setTimeout(() => {
+      setLoadSpinner(false);
+    }, 1000);
   }, []);
-  return (
-    <>
-      <div className='menu'>
-        <Navbar />
-      </div>
-      <Conatiner>
-        <Slider></Slider>
-      </Conatiner>
-    </>
-  );
+  useEffect(() => {
+    getMovies().then((movies) => {
+      dispatch(setMovies(movies));
+    });
+  }, []);
+  useEffect(() => {
+    getTrending().then((movies) => {
+      dispatch(setTrending(movies));
+    });
+    getUpComing().then((movies) => {
+      dispatch(setUpcoming(movies));
+    });
+  }, []);
+  const getHomeData = () => {
+    return (
+      <>
+        <div className='menu'>
+          <Navbar />
+        </div>
+        <ConatinerVedio>
+          <Video></Video>
+        </ConatinerVedio>
+        <Conatiner>
+          <h1 className='text-align left'>Trendingmovies</h1>
+          <Slider movies={trendingmovies}></Slider>
+        </Conatiner>
+        <Conatiner>
+          <h1 className='text-align left'>Popular</h1>
+          <Slider movies={popular}></Slider>
+        </Conatiner>
+        <Conatiner>
+          <h1 className='text-align left'>Up coming</h1>
+          <Slider movies={upcoming}></Slider>
+        </Conatiner>
+      </>
+    );
+  };
+  return <>{loadSpinner ? <Spinner /> : getHomeData()}</>;
 };
 
 export default Home;
+const ConatinerVedio = styled.div`
+  width: 100%;
+`;
 const Conatiner = styled.div`
   width: 100%;
-  padding: 0px 5em;
-  margin: 10px 0px;
+  padding: 0px 3em;
+  margin: 10px auto;
 `;

@@ -1,0 +1,30 @@
+[debug] [2021-08-26T04:07:43.949Z] ----------------------------------------------------------------------
+[debug] [2021-08-26T04:07:43.954Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2021-08-26T04:07:43.955Z] CLI Version:   9.16.6
+[debug] [2021-08-26T04:07:43.955Z] Platform:      linux
+[debug] [2021-08-26T04:07:43.955Z] Node Version:  v14.17.0
+[debug] [2021-08-26T04:07:43.956Z] Time:          Thu Aug 26 2021 09:37:43 GMT+0530 (India Standard Time)
+[debug] [2021-08-26T04:07:43.956Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-26T04:07:43.967Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-26T04:07:43.968Z] > authorizing via signed-in user (majjikishore031@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/majjikishore007/tweakings/projs/netflix-clone/netflix-cone
+
+[debug] [2021-08-26T04:08:03.640Z] TypeError: Cannot read property 'setRawMode' of null
+    at ReadStream.setRawMode (tty.js:76:28)
+    at Interface._setRawMode (readline.js:303:16)
+    at Interface.close (readline.js:426:10)
+    at ReadStream.ontermend (readline.js:209:10)
+    at ReadStream.emit (events.js:388:22)
+    at ReadStream.emit (domain.js:470:12)
+    at endReadableNT (internal/streams/readable.js:1336:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)

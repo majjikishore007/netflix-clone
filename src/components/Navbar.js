@@ -19,8 +19,10 @@ const Navbar = () => {
       history.push("/");
     }, 1000);
   };
+  const loadSpinner = () => {};
   return (
     <>
+      {}
       <Nav>
         <nav className='navbar navbar-expand-lg navbar-light'>
           <div className='container-fluid'>
