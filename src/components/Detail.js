@@ -18,14 +18,23 @@ const Detail = () => {
     getKey();
     getMovies();
   }, []);
-  const getKey = async () => {
-    const data = await getVedioKey(id);
-    setKey(data[0].key);
+  const getKey = () => {
+    getVedioKey(id)
+      .then((res) => {
+        setKey(res[0].key);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
-  const getMovies = async () => {
-    const data = await getMovieById(id);
-    console.log("movie", data);
-    setMovie(data);
+  const getMovies = () => {
+    getMovieById(id)
+      .then((res) => {
+        setMovie(res);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
   const handleT = () => {
     setShow(!show);
