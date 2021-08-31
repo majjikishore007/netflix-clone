@@ -55,7 +55,7 @@
   height: 100%;
   padding: 15px 15px ;
   width: 100%;
-  border-radius: 4px 4px 4px 0;
+  /* border-radius: 4px 4px 4px 0; */
   outline: none;
   border: none;
   font-size: 1.4em;
@@ -68,7 +68,7 @@
   width: 50%;
   background-color: #e21717;
   outline: none;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   border: none;
   color: white;
 }

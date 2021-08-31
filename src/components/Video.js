@@ -11,19 +11,25 @@ var VIDEOS = {
     "https://s3.amazonaws.com/codecademy-content/courses/React/react_video-eek.mp4",
 };
 
-const Video = () => {
+const Video = (props) => {
+  const { vediokey, height, width } = props;
+  const url = vediokey ? vediokey : "Tfmr8pPy_1M";
+  const widthvideo = width ? width : "100%";
+  const heightvideo = height ? height : "800px";
+
+  console.log(url);
   return (
     <div>
       <ReactPlayer
         controls
-        url='https://www.youtube.com/watch?v=JD17Usa3588'
+        url={`https://www.youtube.com/watch?v=${url}`}
         onReady={() => console.log("onReady Callback")}
         onStart={() => console.log("onStart Callback")}
         onPause={() => console.log("onPause Callback")}
         onEnded={() => console.log("onEnded Callback")}
         onError={() => console.log("onError Callback")}
-        width={"100%"}
-        height={"800px"}
+        width={widthvideo}
+        height={heightvideo}
         autoPlay={true}
         loop={true}
         onReady={true}
