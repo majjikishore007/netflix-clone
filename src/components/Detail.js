@@ -58,7 +58,7 @@ const Detail = () => {
         <Navbar></Navbar>
         <Container>
           {show && showTrailer()}
-          {key && (
+          {
             <>
               <Background>
                 <img
@@ -88,7 +88,7 @@ const Detail = () => {
                 <h3>{movie.genre}</h3>
               </div>
             </>
-          )}
+          }
         </Container>
       </>
     );

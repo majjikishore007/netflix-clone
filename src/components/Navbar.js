@@ -50,15 +50,15 @@ const Navbar = () => {
                 <ul className='navbar-nav me-auto mb-4 mb-lg-0'>
                   <li className='nav-item'>
                     <Link className='nav-link' to='/home'>
-                      <a>Home</a>
+                      <a>Movies</a>
                     </Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link'>
+                    <Link className='nav-link' to='/tvshows'>
                       <a>TV Shows</a>
                     </Link>
                   </li>
-                  <li className='nav-item'>
+                  {/* <li className='nav-item'>
                     <Link className='nav-link' to='/movies'>
                       <a>Movies</a>
                     </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                     <Link className='nav-link' to='/new&popular'>
                       <a>New&Popular</a>
                     </Link>
-                  </li>
+                  </li> */}
                   <li className='nav-item'>
                     <Link className='nav-link'>
                       <a>My List</a>
