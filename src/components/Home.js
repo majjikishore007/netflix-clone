@@ -52,7 +52,7 @@ const Home = () => {
         </div>
 
         <ConatinerVedio>
-          <Video></Video>
+          <Video vediokey={"_sc3HyeNxPs"}></Video>
         </ConatinerVedio>
         <Conatiner>
           <h2 className='text-align left'>Trendingmovies</h2>

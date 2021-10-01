@@ -40,3 +40,22 @@ export const getMovieById = async (id) => {
   console.log(response);
   return response;
 };
+// tv shows popular 
+export const getPopuarTvShows = async ()=> {
+  const data = await fetch(
+    `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TMDB_APP}&language=en-US&page=2`
+  );
+  const response = await data.json();
+  console.log(response);
+  return response.results;
+}
+export const getTopRated = async () => {
+  const data = await fetch(
+    `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.REACT_APP_TMDB_APP}&language=en-US&page=1`
+  );
+  const response = await data.json();
+  console.log(response);
+  return response.results;
+};
+
+//
