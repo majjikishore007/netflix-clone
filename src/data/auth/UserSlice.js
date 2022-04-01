@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { isAuthenticated } from '../../components/helper';
+import { isAuthenticated, signout } from '../../components/helper';
 const { displayName, email, photoURL } = isAuthenticated();
 
 const initialState = {
@@ -8,7 +8,6 @@ const initialState = {
   photo: photoURL,
 };
 
-console.log('getting the detalis -----', email);
 const userSlice = createSlice({
   name: 'user',
   initialState,
@@ -22,6 +21,7 @@ const userSlice = createSlice({
       state.name = '';
       state.email = '';
       state.photo = '';
+      signout();
     },
   },
 });
