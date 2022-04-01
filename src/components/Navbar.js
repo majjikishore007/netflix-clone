@@ -141,6 +141,7 @@ const Nav = styled.div`
   height: 80px;
   /* justify-content: center; */
   /* align-items: center; */
+  z-index: 2;
   padding: 0px 10px;
   @media (max-width: 768px) {
     background: black;

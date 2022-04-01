@@ -1,25 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { isAuthenticated } from '../../components/helper';
+const { displayName, email, photoURL } = isAuthenticated();
 
 const initialState = {
-  name: "",
-  email: "",
-  photo: "",
+  name: displayName,
+  email: email,
+  photo: photoURL,
 };
 
+console.log('getting the detalis -----', email);
 const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState,
   reducers: {
     setUserLogin: (state, action) => {
-      console.log("PAYLOAD", action.payload);
-      state.name = action.payload.name;
-      state.email = action.payload.email;
-      state.photo = action.payload.photo;
+      state.name = displayName;
+      state.email = email;
+      state.photo = photoURL;
     },
     setUserSignout: (state, action) => {
-      state.name = "";
-      state.email = "";
-      state.photo = "";
+      state.name = '';
+      state.email = '';
+      state.photo = '';
     },
   },
 });

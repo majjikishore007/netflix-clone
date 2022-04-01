@@ -27,7 +27,7 @@ const Header = styled.div`
       rgba(0, 0, 0, 0.672),
       rgba(0, 0, 0, 0.472)
     ),
-    url("images/background.jpg");
+    url('images/background.jpg');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;

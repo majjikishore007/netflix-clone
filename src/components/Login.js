@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import Background from "./Background";
-import "../styles/login.css";
-import Fotter from "./Fotter";
-import { Link, useHistory } from "react-router-dom";
-import { facebookSignIn, googleSignIn } from "../data/auth/auth_helper";
-import { useDispatch } from "react-redux";
-import { setUserLogin, setUserSignout } from "../data/auth/UserSlice";
-import { css } from "@emotion/react";
+import { useDispatch } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
+import styled from 'styled-components';
+import { facebookSignIn, googleSignIn } from '../data/auth/auth_helper';
+import { setUserLogin } from '../data/auth/UserSlice';
+import '../styles/login.css';
+import Background from './Background';
+import Fotter from './Fotter';
 const Login = () => {
   let [loading, setLoading] = useState(true);
   let [color, setColor] = useState("#ffffff");
