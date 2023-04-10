@@ -7,6 +7,8 @@ export const getMovies = async () => {
   return response.results;
 };
 
+
+
 export const getTrending = async () => {
   const data = await fetch(
     `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_TMDB_APP}`
