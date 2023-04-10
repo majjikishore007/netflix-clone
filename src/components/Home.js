@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import Navbar from "./Navbar";
-import "../styles/home.css";
-import { useDispatch, useSelector } from "react-redux";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 import {
-  setMovies,
   selectMovie,
-  setTrending,
   selectTrendingMovies,
-  setUpcoming,
   selectUpComingMovies,
-} from "../data/Movies/MovieSlice";
-import MovieCard from "./MovieCard";
-import Slider from "./Slider";
-import Spinner from "./Spinner";
+  setMovies,
+  setTrending,
+  setUpcoming,
+} from '../data/Movies/MovieSlice';
 import {
   getMovies,
   getTrending,
   getUpComing,
-} from "../data/Movies/tmdb_helper";
-import Video from "./Video";
+} from '../data/Movies/tmdb_helper';
+import '../styles/home.css';
+import Navbar from './Navbar';
+import Slider from './Slider';
+import Spinner from './Spinner';
+import Video from './Video';
 const Home = () => {
   const dispatch = useDispatch();
   const popular = useSelector(selectMovie);
@@ -52,7 +52,7 @@ const Home = () => {
         </div>
 
         <ConatinerVedio>
-          <Video vediokey={"_sc3HyeNxPs"}></Video>
+          <Video vediokey={'_sc3HyeNxPs'}></Video>
         </ConatinerVedio>
         <Conatiner>
           <h2 className='text-align left'>Trendingmovies</h2>

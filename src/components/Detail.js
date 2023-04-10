@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import styled from "styled-components";
-import { getMovieById, getVedioKey } from "../data/Movies/tmdb_helper";
-import Navbar from "./Navbar";
-import Spinner from "./Spinner";
-import Video from "./Video";
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
+import { getMovieById, getVedioKey } from '../data/Movies/tmdb_helper';
+import Navbar from './Navbar';
+import Spinner from './Spinner';
+import Video from './Video';
 const Detail = () => {
   const { id } = useParams();
-  const [key, setKey] = useState("");
+  const [key, setKey] = useState('');
   const [movie, setMovie] = useState({});
   const [loadSpinner, setLoadSpinner] = useState(true);
   const [show, setShow] = useState(false);
@@ -17,6 +18,7 @@ const Detail = () => {
     }, 1000);
     getKey();
     getMovies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const getKey = () => {
     getVedioKey(id)
@@ -40,14 +42,14 @@ const Detail = () => {
     setShow(!show);
   };
   const showTrailer = () => {
-    console.log("show");
+    console.log('show');
     return (
       <div className='container'>
         <VideoContainer>
           <CloseButton onClick={handleT}>
             <span>x</span>
           </CloseButton>
-          <Video width={"600px"} height={"400px"} vediokey={key}></Video>
+          <Video width={'600px'} height={'400px'} vediokey={key}></Video>
         </VideoContainer>
       </div>
     );

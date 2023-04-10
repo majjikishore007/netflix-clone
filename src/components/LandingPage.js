@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { signupWithEmail } from "../data/auth/auth_helper";
-import { auth } from "../firebase";
-import "../styles/landingpage.css";
-import Background from "./Background";
-import Fotter from "./Fotter";
+import React, { useState } from 'react';
+import { signupWithEmail } from '../data/auth/auth_helper';
+import '../styles/landingpage.css';
+import Background from './Background';
+import Fotter from './Fotter';
 const LandingPage = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   return (
     <div>
       <Background>
@@ -74,12 +73,12 @@ const LandingPage = () => {
                   <img src='/images/boxshot.png' alt='' />
                 </div>
                 <div className='animation-content'>
-                  <div style={{ fontWeight: "bold" }}>Stranger Things</div>
-                  <div style={{ color: "blue" }}>Downloading...</div>
+                  <div style={{ fontWeight: 'bold' }}>Stranger Things</div>
+                  <div style={{ color: 'blue' }}>Downloading...</div>
                 </div>
                 <div className='animation-gif'>
                   <img
-                    style={{ width: "100%", height: "100%" }}
+                    style={{ width: '100%', height: '100%' }}
                     src='/images/download-icon.gif'
                     alt=''
                   />
@@ -109,10 +108,10 @@ const LandingPage = () => {
               <img src='/images/device-pile-in.png' alt='' />
               <video
                 style={{
-                  width: "60%",
-                  height: "56%",
-                  top: "0px",
-                  left: "19%",
+                  width: '60%',
+                  height: '56%',
+                  top: '0px',
+                  left: '19%',
                 }}
                 autoPlay
               >

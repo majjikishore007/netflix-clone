@@ -1,26 +1,28 @@
-import React, { useState } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
-import { facebookSignIn, googleSignIn } from '../data/auth/auth_helper';
 import { setUserLogin } from '../data/auth/UserSlice';
+import { facebookSignIn, googleSignIn } from '../data/auth/auth_helper';
 import '../styles/login.css';
 import Background from './Background';
 import Fotter from './Fotter';
 const Login = () => {
   let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#ffffff");
+  // let [color, setColor] = useState("#ffffff");
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const googlelogin = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result);
-        var credential = result.credential;
+        // console.log(result);
+        // var credential = result.credential;
         var user = result.user;
-        var accessToken = credential.accessToken;
+        // var accessToken = credential.accessToken;
         dispatch(
           setUserLogin({
             name: user.displayName,
@@ -30,7 +32,7 @@ const Login = () => {
         );
 
         setTimeout(() => {
-          history.push("/home");
+          history.push('/home');
         }, 1000);
       })
       .catch((error) => {
@@ -80,7 +82,6 @@ const Login = () => {
                   onClick={() => {
                     setLoading(!loading);
                   }}
-                  className='button animate__hinge'
                 >
                   Sign In
                 </button>
@@ -94,26 +95,26 @@ const Login = () => {
               <div>
                 <button className='btn-rounded' onClick={googlelogin}>
                   <div className='img1'>
-                    {" "}
+                    {' '}
                     <img src='https://img.icons8.com/color/48/000000/google-logo.png' />
                   </div>
                   <div className='titles'>Sign In with Google</div>
                 </button>
               </div>
-              <div>
+              {/* <div>
                 <button className='btn-rounded ' onClick={facebooklogin}>
                   <div className='img1'>
-                    {" "}
+                    {' '}
                     <img src='https://img.icons8.com/color/48/000000/facebook-circled--v1.png' />
                   </div>
                   <div className='titles'>Sign In with Facebok</div>
                 </button>
-              </div>
+              </div> */}
               <div>
-                New to Netflix?{" "}
+                New to Netflix?{' '}
                 <Link to='/signup'>
                   <a href=''> Sign up now</a>
-                </Link>{" "}
+                </Link>{' '}
                 . This page is protected by Google reCAPTCHA to ensure you're
                 not a bot. Learn more.
               </div>

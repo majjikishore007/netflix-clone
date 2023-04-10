@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import Background from "./Background";
-import "../styles/login.css";
-import "../styles/signup.css";
-import Fotter from "./Fotter";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import '../styles/login.css';
+import '../styles/signup.css';
+import Background from './Background';
+import Fotter from './Fotter';
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <div>
       <Background>

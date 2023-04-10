@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react';
+import styled from 'styled-components';
 const Fotter = () => {
   return (
     <div>
@@ -8,70 +9,70 @@ const Fotter = () => {
           <Grid className='row'>
             <div className='col'>
               <div>
-                {" "}
-                <a href=''>FAQ</a>{" "}
+                {' '}
+                <a href=''>FAQ</a>{' '}
               </div>
               <div>
-                {" "}
-                <a href=''>Investor Relations</a>{" "}
+                {' '}
+                <a href=''>Investor Relations</a>{' '}
               </div>
               <div>
-                {" "}
-                <a href=''>Privacy</a>{" "}
+                {' '}
+                <a href=''>Privacy</a>{' '}
               </div>
               <div>
-                {" "}
-                <a href=''>Speed Test</a>{" "}
-              </div>
-            </div>
-            <div className='col'>
-              <div>
-                {" "}
-                <a href=''>Help Centre</a>{" "}
-              </div>
-              <div>
-                {" "}
-                <a href=''>Jobs</a>{" "}
-              </div>
-              <div>
-                {" "}
-                <a href=''>Cookie Preferences</a>{" "}
-              </div>
-              <div>
-                {" "}
-                <a href=''>Legal notices</a>{" "}
+                {' '}
+                <a href=''>Speed Test</a>{' '}
               </div>
             </div>
             <div className='col'>
               <div>
-                {" "}
-                <a href=''>Account</a>{" "}
+                {' '}
+                <a href=''>Help Centre</a>{' '}
               </div>
               <div>
-                {" "}
-                <a href=''>Ways to Watch</a>{" "}
+                {' '}
+                <a href=''>Jobs</a>{' '}
               </div>
               <div>
-                {" "}
-                <a href=''>Corporate Information</a>{" "}
+                {' '}
+                <a href=''>Cookie Preferences</a>{' '}
               </div>
               <div>
-                {" "}
-                <a href=''>Only on Netflix</a>{" "}
+                {' '}
+                <a href=''>Legal notices</a>{' '}
               </div>
             </div>
             <div className='col'>
               <div>
-                {" "}
-                <a href=''>Media Centre</a>{" "}
+                {' '}
+                <a href=''>Account</a>{' '}
               </div>
               <div>
-                {" "}
-                <a href=''>Terms of Use</a>{" "}
+                {' '}
+                <a href=''>Ways to Watch</a>{' '}
               </div>
               <div>
-                {" "}
-                <a href=''>Contact Us</a>{" "}
+                {' '}
+                <a href=''>Corporate Information</a>{' '}
+              </div>
+              <div>
+                {' '}
+                <a href=''>Only on Netflix</a>{' '}
+              </div>
+            </div>
+            <div className='col'>
+              <div>
+                {' '}
+                <a href=''>Media Centre</a>{' '}
+              </div>
+              <div>
+                {' '}
+                <a href=''>Terms of Use</a>{' '}
+              </div>
+              <div>
+                {' '}
+                <a href=''>Contact Us</a>{' '}
               </div>
             </div>
           </Grid>
@@ -82,17 +83,17 @@ const Fotter = () => {
 };
 
 export default Fotter;
-const A = styled.a`
-  font-size: 1em;
-  color: #757575;
-  text-decoration: none;
-  letter-spacing: 1.4px;
-  margin: 4px 4px;
-  &:hover {
-    color: #757575;
-    text-decoration: underline;
-  }
-`;
+// const A = styled.a`
+//   font-size: 1em;
+//   color: #757575;
+//   text-decoration: none;
+//   letter-spacing: 1.4px;
+//   margin: 4px 4px;
+//   &:hover {
+//     color: #757575;
+//     text-decoration: underline;
+//   }
+// `;
 
 const FtBox = styled.div`
   width: 100%;

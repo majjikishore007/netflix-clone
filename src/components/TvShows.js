@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 import {
-  getPopuarTvShows,
-  getTopRated,
-  getLatest,
-} from "../data/Movies/tmdb_helper";
-import {
-  selectTvShow,
-  setTvShows,
-  setTopRated,
   selectTopRated,
-} from "../data/Movies/TvShowsSlice";
-import Navbar from "./Navbar";
-import Video from "./Video";
-import Slider from "./Slider";
-import Spinner from "./Spinner";
-import styled from "styled-components";
+  selectTvShow,
+  setTopRated,
+  setTvShows,
+} from '../data/Movies/TvShowsSlice';
+import { getPopuarTvShows, getTopRated } from '../data/Movies/tmdb_helper';
+import Navbar from './Navbar';
+import Slider from './Slider';
+import Spinner from './Spinner';
+import Video from './Video';
 const TvShows = () => {
   const popularTvShows = useSelector(selectTvShow);
   const topRated = useSelector(selectTopRated);
@@ -48,7 +45,7 @@ const TvShows = () => {
         </div>
 
         <ConatinerVedio>
-          <Video vediokey={"SL9aJcqrtnw"}></Video>
+          <Video vediokey={'SL9aJcqrtnw'}></Video>
         </ConatinerVedio>
         <Conatiner>
           <h2 className='text-align left'>Popular TvShows </h2>

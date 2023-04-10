@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 import "slick-carousel/slick/slick-theme.css";
-import "../styles/slider.css";
-import { Link } from "react-router-dom";
+import 'slick-carousel/slick/slick.css';
+import styled from 'styled-components';
+import '../styles/slider.css';
 const SliderMovie = (props) => {
   const { movies } = props;
 
@@ -19,17 +19,19 @@ const SliderMovie = (props) => {
     <>
       <Carousel {...settings}>
         {movies != null
-          ? movies.map((movie) => (
-              <Link to={`/detail/${movie.id}`}>
-                <Wrap key={movie.id}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                    alt=''
-                  />
-                </Wrap>
-              </Link>
+          ? movies.map((movie, id) => (
+              <div key={id}>
+                <Link to={`/detail/${movie.id}`}>
+                  <Wrap key={movie.id}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                      alt=''
+                    />
+                  </Wrap>
+                </Link>
+              </div>
             ))
-          : ""}
+          : ''}
       </Carousel>
     </>
   );

@@ -1,13 +1,14 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
-import styled from "styled-components";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
+import styled from 'styled-components';
 import {
   selectUserName,
   selectUserPhoto,
   setUserSignout,
-} from "../data/auth/UserSlice";
-import "../styles/navbar.css";
+} from '../data/auth/UserSlice';
+import '../styles/navbar.css';
 const Navbar = () => {
   const history = useHistory();
   const dispatch = useDispatch();
@@ -16,10 +17,9 @@ const Navbar = () => {
   const signout = () => {
     dispatch(setUserSignout());
     setTimeout(() => {
-      history.push("/");
+      history.push('/');
     }, 1000);
   };
-  const loadSpinner = () => {};
   return (
     <>
       {}
@@ -78,7 +78,10 @@ const Navbar = () => {
 
               <NavContainer>
                 {name ? (
-                  <li class='nav-item dropdown' style={{ listStyle: "none" }}>
+                  <li
+                    className='nav-item dropdown'
+                    style={{ listStyle: 'none' }}
+                  >
                     <div
                       className='user-icon nav-link dropdown-toggle'
                       id='navbarDropdownMenuLink'
@@ -89,7 +92,7 @@ const Navbar = () => {
                       <img src={photo} alt='' />
                     </div>
                     <ul
-                      class='dropdown-menu'
+                      className='dropdown-menu'
                       aria-labelledby='navbarDropdownMenuLink'
                     >
                       <li>
@@ -156,24 +159,24 @@ const Logo = styled.div`
     height: 100%;
   }
 `;
-const NavMenu = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  margin-left: 3em;
-  a {
-    margin: 0 4px;
-    text-decoration: none;
-    color: #fff;
-  }
-  a:hover {
-    color: #e5e5e5;
-  }
-`;
-const SecondaryNav = styled.div`
-  display: flex;
-  flex: -1;
-  div {
-    margin: 0px 7px;
-  }
-`;
+// const NavMenu = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   flex: 1;
+//   margin-left: 3em;
+//   a {
+//     margin: 0 4px;
+//     text-decoration: none;
+//     color: #fff;
+//   }
+//   a:hover {
+//     color: #e5e5e5;
+//   }
+// `;
+// const SecondaryNav = styled.div`
+//   display: flex;
+//   flex: -1;
+//   div {
+//     margin: 0px 7px;
+//   }
+// `;

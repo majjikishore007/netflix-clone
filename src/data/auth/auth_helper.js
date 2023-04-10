@@ -1,13 +1,17 @@
 import firebase from "firebase";
-import { fbProvider, googleprovider } from '../../firebase';
 import { authenticate } from '../../components/helper';
+import { fbProvider, googleprovider } from '../../firebase';
+
 export const googleSignIn = () => {
+  console.log(
+    'google signin :::::::::::::::::::::::::::::::::::::::::::::::::::::::'
+  );
   return firebase
     .auth()
     .signInWithPopup(googleprovider)
     .then((result) => {
-      var credential = result.credential;
-      var token = credential.accessToken;
+      //var credential = result.credential;
+      //var token = credential.accessToken;
       var user = result.user;
       authenticate('jwt', user);
       return result;
@@ -56,8 +60,6 @@ export const signupWithEmail = (email) => {
       // ...
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
+      console.log(error);
     });
 };
